@@ -30,6 +30,4 @@ function setColor(element, color) {
 }
 
 // Local Storage
-var myName = "Matt";
-
-localStorage.setItem("name", MyName);
+document.getElementById("my-btn").addEventListener('click', console.log ("hello"));
