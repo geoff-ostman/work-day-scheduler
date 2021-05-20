@@ -29,11 +29,7 @@ function setColor(element, color) {
   element.style.backgroundColor = color;
 }
 
+// Local Storage
+var myName = "Matt";
 
-// Save To Local Storage
-for (let i = 0; i < submit.length; i++) {
-    const element = submit[i];
-    element.addEventListener('click', function (event) {
-      console.log("Save button clicked " + element.id );
-    })
-  }
+localStorage.setItem("name", MyName);
