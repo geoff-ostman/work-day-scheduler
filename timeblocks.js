@@ -1,3 +1,5 @@
+let submit = document.getElementsByClassName('savebutton');
+
 // Time Blocks
 const rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format('H'));
@@ -29,29 +31,9 @@ function setColor(element, color) {
 
 
 // Save To Local Storage
-submit.addEventListener('click', function (event) {
-
-	// Don't submit the form
-	event.preventDefault();
-
-	// Ignore it if the wishlist item is empty
-	if (task.value.length < 1) return;
-
-	// Add item to wishlist
-	task.innerHTML += '<li>' + task.value + '</li>';
-
-	// Clear input
-	task.value = '';
-
-	// Save the list to localStorage
-	localStorage.setItem('wishlistItems', task.innerHTML);
-
-}, false);
-
-// Check for saved wishlist items
-var saved = localStorage.getItem('task');
-
-// If there are any saved items, update our list
-if (saved) {
-	task.innerHTML = saved;
-}
+for (let i = 0; i < submit.length; i++) {
+    const element = submit[i];
+    element.addEventListener('click', function (event) {
+      console.log("Save button clicked " + element.id );
+    })
+  }
